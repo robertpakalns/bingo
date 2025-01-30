@@ -47,9 +47,6 @@
         </table>
         <label id="rulesLabel">Pirmajam, kas dabū bingo, ir jāiebļaujas, lai uzvarētu</label>
         <div class="inputDiv">
-            <select id="catSelect" class="catSelect">
-                <option value="vita">LV Stundas</option>
-            </select>
             <input type="button" id="newCatBtn" onclick="loadNewPrompts()" value="NEW CARD">
         </div>
         <script>
@@ -149,7 +146,6 @@
                     tButtons[i].style = "width: "+ unit*0.17 + "px; height: "+unit*0.17 + "px; font-size: "+ unit*0.030+"px;";
 
                 }
-                document.getElementById("catSelect").style = "font-size: " + (unit*0.03)+"px;";
                 document.getElementById("newCatBtn").style = "font-size: " + (unit*0.028)+"px; margin-left: 1vh;";
                 document.getElementById("rulesLabel").style = "font-size: " + (unit*0.03)+"px;";
                 /*for(let i = 0; i < tiles.length; i++){
@@ -162,7 +158,7 @@
             }
 
             async function loadNewPrompts(){
-                let category = document.getElementById("catSelect").value;
+                let category = 'vita';
                 const resp = await fetch(`/new_bingo/${category}`);
                 let prompts = (await resp.json()).split(" ");
                 for(let i = 0; i < tButtons.length; i++){
