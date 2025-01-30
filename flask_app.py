@@ -149,10 +149,6 @@ def submit_score():
 def lvBingo():
     return render_template('lvbingo.html');
 
-@app.route('/fullbingo')
-def fullBingo():
-    return render_template('bingo.html');
-
 @app.route('/new_bingo/<string:category>', methods=['GET'])
 def newBingo(category):
     f=open('/home/Kruman/mysite/templates/assets/' + category + 'Prompts.txt', 'r')
