@@ -10,10 +10,10 @@ app = Flask(__name__)
 comments = []
 
 db_config = {
-    'host': 'egrieze.mysql.pythonanywhere-services.com',
-    'user': 'egrieze',
-    'password': 'Bugati99!',
-    'database': 'egrieze$default'
+    'host': '',
+    'user': '',
+    'password': '',
+    'database': ''
 }
 
 @app.route('/pirmais')
@@ -42,27 +42,7 @@ def vards(v):
 def index():
     return render_template("web_game.html")
 
-     # mydb = mysql.connector.connect(
-      #host="Kruman.mysql.pythonanywhere-services.com",
-     # user="Kruman",
-     # passwd="K223aggdfsFDS",
-      #database="Kruman$default"
-    #)
-    #mycursor = mydb.cursor()
-    #if request.method == "GET":
-      #  mycursor.execute("SELECT Viesi.Autors, Viesi.Komentars, Viesi.Datums, Vardi.Diena, Vardi.Menesis FROM Viesi LEFT JOIN Vardi ON Vardi.Vards = Viesi.Autors")
-      #  rez=mycursor.fetchall()
-       # mycursor.clear_attributes()
-      #  mycursor.execute("SELECT Nosaukums FROM Menesi")
-     #   nsk = mycursor.fetchall()
-      #  mydb.close()
-      #  return render_template("main_page.html", commentor=rez, menesis=nsk)
-    #values = (request.form["autors"], request.form["komentars"])
-    #sql = "INSERT INTO Viesi (Autors, Komentars) VALUES (%s,%s)"
-   #mycursor.execute(sql,values)
-    #mydb.commit()
-   # mydb.close()
-    #return redirect(url_for('index'))
+     
 
 @app.route('/romusk/<string:st>')
 def rom(st):
