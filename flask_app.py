@@ -147,7 +147,7 @@ def submit_score():
 
 @app.route('/lvbingo')
 def lvBingo():
-    return render_template('lvbingo.html');
+    return render_template('bingo.html');
 
 @app.route('/new_bingo/<string:category>', methods=['GET'])
 def newBingo(category):
