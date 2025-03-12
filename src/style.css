@@ -27,10 +27,7 @@ table {
 
 td {
   border: 1px solid black;
-
-  &:hover {
-    background: rgb(167, 201, 87);
-  }
+  cursor: pointer;
 
   &.selected {
     background: rgb(167, 201, 87);
@@ -38,6 +35,10 @@ td {
 
   &.won {
     background: yellow;
+  }
+
+  &:hover {
+    color: rgb(50, 50, 50);
   }
 }
 
