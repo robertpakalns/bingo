@@ -1,44 +1,44 @@
-"Cietais_Disks"
+"Cietais Disks"
 "Datoriķi"
-Skolotāja_Kavē
-Pauls_Guļ
-Edvards_Kavē
-Dāvids_Kavē
-Gabriels_Royale
-Skolotāja_Sāk_Lēkāt
-3+_Cilvēki_Kavē
+Skolotāja Kavē
+Pauls Guļ
+Edvards Kavē
+Dāvids Kavē
+Gabriels Royale
+Skolotāja Sāk Lēkāt
+3+ Cilvēki Kavē
 "Jaunieši!"
 ChatGPT
-Bija_MD?
+Bija MD?
 "Ju-Je-Yao"
-Grupu_Darbs
-Darba_Lapa
-Darbs_no_Grāmatas
-Durvju_Bariņš
-Papīra_Lidmašīnas
+Grupu Darbs
+Darba Lapa
+Darbs no Grāmatas
+Durvju Bariņš
+Papīra Lidmašīnas
 Tourettes
 Monologs
-Skolotājai_Hudijs
+Skolotājai Hudijs
 "Matemātiķi"
-Stray_Bullets
-"Es_Drīz_Izlabošu"
-"Cik_Minūtes_Pirms_Jāierodas??"
-Ēriks_Dronē
+Stray Bullets
+"Es Drīz Izlabošu"
+"Cik Minūtes Pirms Jāierodas??"
+Ēriks Dronē
 DāvidsGPT
-Gabriels_Iet_Mīzt
-1Stunda_1Uzdevums
+Gabriels Iet Mīzt
+1Stunda 1Uzdevums
 Sidetracked
 Edvards
-Starpstundu_Entry
-Ēriks_Tweako
-"Pelēkās_Šūniņas"
-"Tie_Kas_Jau_Pie_Manis_Mācījās..."
-Skolotāja_Mīž_uz_Mīžzējiem
-Edvards_Ierodas
-Adhd_Activities
-"LV_Stundās_Jādara_Latviešu_Valoda"
-Skolotāja_Dippo
+Starpstundu Entry
+Ēriks Tweako
+"Pelēkās Šūniņas"
+"Tie Kas Jau Pie Manis Mācījās..."
+Skolotāja Mīž uz Mīžzējiem
+Edvards Ierodas
+Adhd Activities
+"LV Stundās Jādara Latviešu Valoda"
+Skolotāja Dippo
 Doomscrolls
 Žirīšana
 Warfare
-Sūdzās_Par_Atzīmēm
+Sūdzās Par Atzīmēm

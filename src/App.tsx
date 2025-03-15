@@ -68,7 +68,7 @@ const CreateTable = ({ words }: { words: string[] }) => {
         {Array.from({ length: 5 }, (_, row) => (
           <tr key={row}>
             {Array.from({ length: 5 }, (_, column) => (
-              <td key={column}>{words[row * 5 + column]?.replace(/_/g, " ")}</td>
+              <td key={column}>{words[row * 5 + column]}</td>
             ))}
           </tr>
         ))}

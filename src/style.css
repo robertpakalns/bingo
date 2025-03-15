@@ -4,14 +4,18 @@
   text-align: center;
 }
 
-body {
+#root {
   width: 100vw;
   height: 100vh;
+}
+
+body {
   user-select: none;
   font-family: Arial, sans-serif;
   background-color: #f2e8cf;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
