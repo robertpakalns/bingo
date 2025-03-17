@@ -7,7 +7,6 @@ Made with `Vite`, `React` and `TypeScript`
 ```bash
 # Make sure Node.js is installed
 npm install
-npm run dev # Development mode
-npm run build # Build the project
+npm run dev # Localhost
+npm run build # Output folder: `./dist`
 ```
-Output folder: `./dist`

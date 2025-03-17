@@ -73,7 +73,7 @@ const App = () => {
     <>
       <h3>Pirmajam, kas dabū bingo, ir jāiebļaujas, lai uzvarētu</h3>
       {showComponent && <ContentTable words={words} />}
-      <div className="btn" onClick={handleStartClick}>{dataFetched ? "UPDATE" : "START"}</div>
+      <div className="btn" onClick={handleStartClick}>{dataFetched ? "SĀKT" : "ATJAUNOT"}</div>
     </>
   )
 }
