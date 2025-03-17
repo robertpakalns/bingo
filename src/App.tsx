@@ -13,17 +13,6 @@ const shuffleArray = (array: string[]): string[] => array
   .sort((a, b) => a.sort - b.sort)
   .map(({ value }) => value)
 
-const resize = (): void => {
-  const table = document.querySelector("#table") as HTMLElement
-  if (!table) return
-
-  const unit: number = Math.min(window.innerWidth, window.innerHeight) * 0.7
-  table.style.cssText = `width: ${unit}px; height: ${unit}px`
-
-  const size: number = Math.min(table.offsetWidth, table.offsetHeight) / 5
-  table.querySelectorAll("td").forEach(td => td.style.cssText = `width: ${size}px; height: ${size}px`)
-}
-
 const handleCells = (table: HTMLElement): void => {
   const tr = table.querySelectorAll("tr")
   const td = (row: HTMLElement): NodeListOf<HTMLTableCellElement> => row.querySelectorAll("td")
@@ -47,7 +36,6 @@ const handleCells = (table: HTMLElement): void => {
     rows.forEach((row, i) => td(row)[cols.length - 1 - i].classList.add("won"))
 }
 
-window.addEventListener("resize", resize)
 document.addEventListener("click", e => {
   const element = (e.target as HTMLElement)?.closest("td") as HTMLElement
   if (!element) return
@@ -60,22 +48,18 @@ document.addEventListener("click", e => {
   handleCells(table)
 })
 
-const CreateTable = ({ words }: { words: string[] }) => {
-  resize()
-  return (
-    <table id="table">
-      <tbody>
-        {Array.from({ length: 5 }, (_, row) => (
-          <tr key={row}>
-            {Array.from({ length: 5 }, (_, column) => (
-              <td key={column}>{words[row * 5 + column]}</td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  )
-}
+const CreateTable = ({ words }: { words: string[] }) =>
+  <table id="table">
+    <tbody>
+      {Array.from({ length: 5 }, (_, row) => (
+        <tr key={row}>
+          {Array.from({ length: 5 }, (_, column) => (
+            <td key={column}>{words[row * 5 + column]}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
 
 const App = () => {
   const [showComponent, setShowComponent] = useState(false)
@@ -88,7 +72,6 @@ const App = () => {
         setWords(shuffleArray(data).slice(0, 25))
         setDataFetched(true)
       })
-      .catch(console.error)
   }, [showComponent, dataFetched])
 
   const handleStartClick = (): void => {
@@ -101,7 +84,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Pirmajam, kas dabū bingo, ir jāiebļaujas, lai uzvarētu</h1>
+      <h3>Pirmajam, kas dabū bingo, ir jāiebļaujas, lai uzvarētu</h3>
       {showComponent && <CreateTable words={words} />}
       <div className="btn" onClick={handleStartClick}>{dataFetched ? "UPDATE" : "START"}</div>
     </>

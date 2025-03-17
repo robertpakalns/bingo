@@ -1,37 +1,40 @@
 * {
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 #root {
   width: 100vw;
   height: 100vh;
-}
-
-body {
+  text-align: center;
   user-select: none;
-  font-family: Arial, sans-serif;
-  background-color: #f2e8cf;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f2e8cf;
 }
 
-h1 {
-  margin: 2rem;
+h3 {
+  margin: 1rem;
 }
 
 table {
-  margin: 2rem auto;
   border: 1px solid black;
   border-collapse: collapse;
+  width: min(90vw, 90vh);
+  height: min(90vw, 90vh);
 }
 
 td {
   border: 1px solid black;
   cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 20%;
+  height: 20%;
+  aspect-ratio: 1/1;
 
   &.selected {
     background: rgb(167, 201, 87);
@@ -47,8 +50,7 @@ td {
 }
 
 .btn {
-  margin: 1rem auto;
-  width: fit-content;
+  margin: 1rem;
   padding: 0.5rem 1rem;
   background: whitesmoke;
   border: 1px solid black;
@@ -56,5 +58,12 @@ td {
 
   &:hover {
     background: rgb(167, 201, 87);
+  }
+}
+
+@media (max-width: 600px),
+(max-height: 600px) {
+  html {
+    font-size: 0.6rem;
   }
 }
