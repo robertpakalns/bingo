@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import ContentTable from "./ContentTable"
 import "./style.css"
 
 const fetchData = async (path: string): Promise<string[]> => {
@@ -13,7 +14,10 @@ const shuffleArray = (array: string[]): string[] => array
   .sort((a, b) => a.sort - b.sort)
   .map(({ value }) => value)
 
-const handleCells = (table: HTMLElement): void => {
+const handleCells = (): void => {
+  const table = document.querySelector("table")
+  if (!table) return
+
   const tr = table.querySelectorAll("tr")
   const td = (row: HTMLElement): NodeListOf<HTMLTableCellElement> => row.querySelectorAll("td")
 
@@ -41,25 +45,8 @@ document.addEventListener("click", e => {
   if (!element) return
 
   element.classList.toggle("selected")
-
-  const table = element.closest("table")
-  if (!table) return
-
-  handleCells(table)
+  handleCells()
 })
-
-const CreateTable = ({ words }: { words: string[] }) =>
-  <table id="table">
-    <tbody>
-      {Array.from({ length: 5 }, (_, row) => (
-        <tr key={row}>
-          {Array.from({ length: 5 }, (_, column) => (
-            <td key={column}>{words[row * 5 + column]}</td>
-          ))}
-        </tr>
-      ))}
-    </tbody>
-  </table>
 
 const App = () => {
   const [showComponent, setShowComponent] = useState(false)
@@ -67,7 +54,7 @@ const App = () => {
   const [dataFetched, setDataFetched] = useState(false)
 
   useEffect(() => {
-    if (showComponent && !dataFetched) fetchData("VitaPrompts.txt")
+    if (showComponent && !dataFetched) fetchData("/prompts/vita.txt") // Currently by default
       .then(data => {
         setWords(shuffleArray(data).slice(0, 25))
         setDataFetched(true)
@@ -85,7 +72,7 @@ const App = () => {
   return (
     <>
       <h3>Pirmajam, kas dabū bingo, ir jāiebļaujas, lai uzvarētu</h3>
-      {showComponent && <CreateTable words={words} />}
+      {showComponent && <ContentTable words={words} />}
       <div className="btn" onClick={handleStartClick}>{dataFetched ? "UPDATE" : "START"}</div>
     </>
   )
